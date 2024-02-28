@@ -1,0 +1,43 @@
+.lista-main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-completo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 50px;
+  width: 500px;
+  height: 250px;
+  border-radius: 5%;
+  background: radial-gradient(#fed502, #ffc73b);
+  background-color: #fed502;
+  border: 1px solid black;
+}
+
+.card-completo:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.card-parametro {
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+}
+
+.card-eliminar {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card-eliminar button {
+  background: radial-gradient(#fed502, #ffc73b);
+  background-color: #fed502;
+  padding: 10px;
+}

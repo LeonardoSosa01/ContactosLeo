@@ -1,0 +1,31 @@
+.Header {
+  max-width: auto;
+  background-image: linear-gradient(to right, #fff0cc, transparent 50%),
+    linear-gradient(to left, #fff0cc, transparent 50%);
+}
+
+.Header img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+.main-bienvenida {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.main-bienvenida h1 {
+  font-size: 80px;
+  font-weight: 500;
+}

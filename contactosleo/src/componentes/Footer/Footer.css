@@ -1,0 +1,14 @@
+.Footer {
+  background-image: linear-gradient(to right, #fff0cc, transparent 50%),
+    linear-gradient(to left, #fff0cc, transparent 50%);
+}
+
+.Footermain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  background: radial-gradient(#fed502, #ffc73b);
+  background-color: #fed502;
+  border: 1px solid black;
+}

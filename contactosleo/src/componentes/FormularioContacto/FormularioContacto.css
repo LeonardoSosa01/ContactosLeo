@@ -1,0 +1,18 @@
+
+
+
+.formulariobase {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 25px;
+  gap: 10px;
+  
+}
+
+.formulariobase input {
+  display: flex;
+  padding: 3px;
+}
+
+
