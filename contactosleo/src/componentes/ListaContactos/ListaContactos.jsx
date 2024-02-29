@@ -18,7 +18,7 @@ const ListaContactos = ({ contactos, eliminarContacto, limpiarLocalStorage }) =>
     <>
 
       <div className='lista-main'>
-        <h2> Estos son Tus Contactos guardados</h2>
+        <h2> Estos son Tus Contactos Guardados</h2>
         <div className='boton-filtro'>
           <h2>Filtro</h2>
           <button>
