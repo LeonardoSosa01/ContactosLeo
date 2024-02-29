@@ -19,11 +19,13 @@ const ListaContactos = ({ contactos, eliminarContacto, limpiarLocalStorage }) =>
       <h2>Tus Contactos guardados</h2>
       <div className='lista-main'>
 
-        <button className='boton-filtro'>
+        <div className='boton-filtro'>
           <h2>Filtro</h2>
-          <Filtro onFiltrar={handleFiltrar} />
-        </button>
-        
+          <button>
+            <Filtro onFiltrar={handleFiltrar} />
+          </button>
+        </div>
+
         {contactosFiltrados.map((contacto, index) => (
           <div className='card-completo' key={index}>
             <div className='card-parametro'>
@@ -41,7 +43,7 @@ const ListaContactos = ({ contactos, eliminarContacto, limpiarLocalStorage }) =>
         ))}
 
         <div className='main-reset'>
-          <h2>Quieres volver a empezar ? Aqui puedes eliminar todos tus contactos. </h2>
+          <h2>¿Quieres volver a empezar? Aqui puedes eliminar todos tus contactos. </h2>
           <button onClick={limpiarLocalStorage}>Eliminar Todos Los contactos</button>
         </div>
       </div>

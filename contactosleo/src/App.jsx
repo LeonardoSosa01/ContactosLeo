@@ -42,8 +42,8 @@ const App = () => {
       <header className='main'>
         <nav className='main-route'>
           <NavLink to='/'>Home</NavLink>
-          <NavLink to='formulario'>Formulario</NavLink>
-          <NavLink to='TuListaDeContactos'>Lista</NavLink>
+          <NavLink to='formulario'>Agregar un Contacto</NavLink>
+          <NavLink to='Lista'>Tu Lista De Contactos</NavLink>
         </nav>
       </header>
 
@@ -55,7 +55,7 @@ const App = () => {
 
         <Route path='formulario' element={<FormularioContacto onAgregarContacto={agregarContacto} />} />
 
-        <Route path='TuListaDeContactos' element={<ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} limpiarLocalStorage={limpiarLocalStorage} />} />
+        <Route path='Lista' element={<ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} limpiarLocalStorage={limpiarLocalStorage} />} />
 
 
       </Routes>

@@ -19,13 +19,15 @@
   background-color: #fed502;
 }
 
-.formu-main button{
+.formu-main button {
   background: radial-gradient(#fed502, #ffc73b);
   background-color: #fed502;
   padding: 10px;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.formu-gestion label{
+.formu-gestion label {
   font-size: 25px;
   display: flex;
   justify-content: center;

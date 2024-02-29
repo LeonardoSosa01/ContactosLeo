@@ -1,4 +1,5 @@
 import React from 'react';
+import './Filtro.css'
 
 const Filtro = ({ onFiltrar }) => {
   const handleFiltroChange = (e) => {
@@ -6,7 +7,7 @@ const Filtro = ({ onFiltrar }) => {
   };
 
   return (
-    <div>
+    <div className='boton'>
       <input
         type="text"
         placeholder="Buscar por nombre o número"
