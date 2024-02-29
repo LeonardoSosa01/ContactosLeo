@@ -1,3 +1,10 @@
+.boton {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .boton input {
+  height: 30px;
   width: 250px;
 }

@@ -33,3 +33,10 @@
   font-size: 20px;
   font-weight: 500;
 }
+
+
+@media (max-width: 1050px) {
+  .Header img {
+   display: none;
+  }
+}
