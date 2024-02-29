@@ -10,7 +10,7 @@ const Header = () => {
                 <div className='main-bienvenida'>
                     <h1>ContactosLeo</h1>
                     <h2>Bienvenidos a tu gestor de contactos</h2>
-                    <p>con contacos leo podras gestionar Tus contactos, empecemos por agendar el primero, luego podras añadir mas, guardarlos y eliminarlos a tu gusto</p>
+                    <p>contactos leo es una aplicacion de gestion de contactos</p>
                 </div>
                 <img src="src/assets/logo2.png" alt="" />
             </div>

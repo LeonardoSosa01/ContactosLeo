@@ -26,5 +26,10 @@
 
 .main-bienvenida h1 {
   font-size: 80px;
+  font-weight: 400;
+}
+
+.main-bienvenida p{
+  font-size: 20px;
   font-weight: 500;
 }

@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import FormularioContacto from './componentes/FormularioContacto/FormularioContacto';
 import ListaContactos from './componentes/ListaContactos/ListaContactos';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
+
+const Home = () => {
+  return <div className='home-route'><h3>Puedes navegar por Formulario, donde podras agregar contactos y Tus contactos se guardaran en la lista<br /> Alli podras Buscarlos por Filtro y Eliminar los que ya no necesites </h3></div>;
+};
+
 
 const App = () => {
   const [contactos, setContactos] = useState([]);
   const [filtro, setFiltro] = useState('');
-  const [listaAbierta, setListaAbierta] = useState(false);
 
   useEffect(() => {
     const storedContactos = JSON.parse(localStorage.getItem('contactos')) || [];
@@ -31,29 +36,34 @@ const App = () => {
     setContactos([]);
   };
 
-  const toggleLista = () => {
-    setListaAbierta(!listaAbierta);
-  };
-
   return (
-    <div className='main'>
-      <h2>Formulario de Contacto</h2>
+    <BrowserRouter>
 
-      <div className='main-gestion'>
-        <FormularioContacto onAgregarContacto={agregarContacto} />
-      </div>
+      <header className='main'>
+        <nav className='main-route'>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='formulario'>Formulario</NavLink>
+          <NavLink to='TuListaDeContactos'>Lista</NavLink>
+        </nav>
+      </header>
 
-      <div className='main-route'>
-        <button onClick={toggleLista}>
-          {listaAbierta ? 'Cerrar Lista' : 'Tu Lista de Contactos'}
-        </button>
-        {listaAbierta && (
-          <div className='main-lista'>
-            <ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} limpiarLocalStorage={limpiarLocalStorage} />
-          </div>
-        )}
-      </div>
-    </div>
+
+
+      <Routes>
+
+        <Route index element={<Home />} />
+
+        <Route path='formulario' element={<FormularioContacto onAgregarContacto={agregarContacto} />} />
+
+        <Route path='TuListaDeContactos' element={<ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} limpiarLocalStorage={limpiarLocalStorage} />} />
+
+
+      </Routes>
+    </BrowserRouter>
+
+
+
+
   );
 };
 

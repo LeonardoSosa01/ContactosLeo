@@ -28,10 +28,10 @@ const FormularioContacto = ({ onAgregarContacto }) => {
 
   return (
     <>
-      <div className='formulariomain' >
+      <div className='formu-main' >
 
-        <form onSubmit={handleSubmit} className='formulariobase'>
-
+        <form onSubmit={handleSubmit} className='formu-gestion'>
+        <h2>Formulario</h2>
           <label>
             Nombre:
             <input
