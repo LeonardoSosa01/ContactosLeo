@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.lista-main h2{
+  margin-bottom: 20px;
+}
+
 .card-completo {
   display: flex;
   flex-direction: column;

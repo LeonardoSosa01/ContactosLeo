@@ -12,6 +12,20 @@
   padding: 10px;
 }
 
+.main-route a {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background: radial-gradient(#fed502, #ffc73b);
+  background-color: #fed502;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 100%;
+  color: black;
+}
+
 .home-route {
   display: flex;
   align-items: center;
