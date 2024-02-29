@@ -16,4 +16,4 @@ const Filtro = ({ onFiltrar }) => {
   );
 };
 
-export { Filtro }
+export default Filtro;

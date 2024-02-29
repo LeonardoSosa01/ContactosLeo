@@ -10,6 +10,4 @@
 // FormularioContacto: aqui esta la seccion de la Lista de contactos donde se guardan todos los contactos que agendamos y podemos eliminar a eleccion
 // Footer: aqui colocamos el pequeño footer con la informacion de quien realizo el proyecto y mas informacion acerca de mi
 
-export { Filtro } from "./Filtro/Filtro";
 
-export { ListaContactos } from "./ListaContactos/ListaContactos";

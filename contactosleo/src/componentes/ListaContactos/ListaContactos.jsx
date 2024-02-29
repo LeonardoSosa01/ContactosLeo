@@ -46,4 +46,4 @@ const ListaContactos = ({ contactos, eliminarContacto, filtro }) => {
     );
 };
 
-export { ListaContactos }
+export default ListaContactos;
