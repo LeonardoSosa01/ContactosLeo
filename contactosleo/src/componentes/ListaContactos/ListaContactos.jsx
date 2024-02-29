@@ -20,7 +20,9 @@ const ListaContactos = ({ contactos, eliminarContacto }) => {
     <>
       <h2>Tus Contactos guardados</h2>
       <div className='lista-main'>
+    
         <button className='boton-filtro'>
+        <h2>Filtro</h2>
         <Filtro onFiltrar={handleFiltrar} /></button>
         {contactosFiltrados.map((contacto, index) => (
           <div className='card-completo' key={index}>
