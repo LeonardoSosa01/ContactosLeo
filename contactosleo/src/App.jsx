@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, NavLink, Routes, Route } from 'react-router-dom';
 import FormularioContacto from './componentes/FormularioContacto/FormularioContacto';
-import Filtro from './componentes/Filtro/Filtro';
 import ListaContactos from './componentes/ListaContactos/ListaContactos';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
+
+const Home = () => {
+  return <div className='home-route'><h3>Puedes navegar por Formulario, donde podras agregar contactos y Tus contactos se guardaran en la lista<br /> Alli podras Buscarlos por Filtro y Eliminar los que ya no necesites </h3></div>;
+};
+
 
 const App = () => {
   const [contactos, setContactos] = useState([]);
   const [filtro, setFiltro] = useState('');
-  const [listaAbierta, setListaAbierta] = useState(false);
 
   useEffect(() => {
     const storedContactos = JSON.parse(localStorage.getItem('contactos')) || [];
@@ -28,49 +31,39 @@ const App = () => {
     localStorage.setItem('contactos', JSON.stringify(newContactos));
   };
 
-  const filtrarContactos = (filtro) => {
-    setFiltro(filtro);
-  };
-
   const limpiarLocalStorage = () => {
     localStorage.clear();
     setContactos([]);
   };
 
-  const toggleLista = () => {
-    setListaAbierta(!listaAbierta);
-  };
-
   return (
-    <Router>
-      <div className='main'>
-        <h2>Formulario de Contacto</h2>
+    <BrowserRouter>
 
-        <div className='main-gestion'>
-          <FormularioContacto onAgregarContacto={agregarContacto} />
-        </div>
+      <header className='main'>
+        <nav className='main-route'>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='formulario'>Agregar un Contacto</NavLink>
+          <NavLink to='Lista'>Tu Lista De Contactos</NavLink>
+        </nav>
+      </header>
 
-        <div className='main-route'>
-          <button onClick={toggleLista}>
-            {listaAbierta ? 'Cerrar Lista' : 'Tu Lista de Contactos'}
-          </button>
-          <div className='main-filtro'>
-            <h2>Filtro</h2>
-            <Filtro onFiltrar={filtrarContactos} />
-          </div>
 
-          {listaAbierta && ( // Mostrar ListaContactos solo si listaAbierta es true
-            <div className='main-lista'>
-              <Routes>
-                <Route path="/lista" element={<ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} />} />
-              </Routes>
-            </div>
-          )}
 
-          <button onClick={limpiarLocalStorage}>Eliminar Todos Los contactos</button>
-        </div>
-      </div>
-    </Router>
+      <Routes>
+
+        <Route index element={<Home />} />
+
+        <Route path='formulario' element={<FormularioContacto onAgregarContacto={agregarContacto} />} />
+
+        <Route path='Lista' element={<ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} limpiarLocalStorage={limpiarLocalStorage} />} />
+
+
+      </Routes>
+    </BrowserRouter>
+
+
+
+
   );
 };
 

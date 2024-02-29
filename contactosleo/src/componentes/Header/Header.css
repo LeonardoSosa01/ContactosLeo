@@ -1,18 +1,17 @@
 .Header {
-  max-width: auto;
   background-image: linear-gradient(to right, #fff0cc, transparent 50%),
     linear-gradient(to left, #fff0cc, transparent 50%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .Header img {
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   height: 200px;
-  width: 250px;
-  position: absolute;
-  left: 50px;
-  top: 20px;
+  padding-top: 20px;
 }
 
 .main-bienvenida {
@@ -22,10 +21,22 @@
   text-align: center;
   padding: 20px;
   gap: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .main-bienvenida h1 {
   font-size: 80px;
+  font-weight: 400;
+}
+
+.main-bienvenida p{
+  font-size: 20px;
   font-weight: 500;
+}
+
+
+@media (max-width: 1050px) {
+  .Header img {
+   display: none;
+  }
 }
