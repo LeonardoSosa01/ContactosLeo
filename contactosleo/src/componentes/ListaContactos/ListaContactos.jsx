@@ -1,6 +1,6 @@
 import React from 'react';
 import './ListaContactos.css'
-import Filtro from '../Filtro/Filtro'; // Asegúrate de que la ruta del import sea correcta
+import Filtro from '../Filtro/Filtro';
 
 const ListaContactos = ({ contactos, eliminarContacto, limpiarLocalStorage }) => {
   const [filtro, setFiltro] = React.useState('');
