@@ -38,7 +38,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className='main'>
+      <div className='main' main={listaAbierta.toString()}>
         <h2>Formulario de Contacto</h2>
 
         <div className='main-gestion'>
