@@ -2,7 +2,7 @@ import React from 'react';
 import './ListaContactos.css'
 import Filtro from '../Filtro/Filtro'; // Asegúrate de que la ruta del import sea correcta
 
-const ListaContactos = ({ contactos, eliminarContacto }) => {
+const ListaContactos = ({ contactos, eliminarContacto, limpiarLocalStorage }) => {
   const [filtro, setFiltro] = React.useState('');
 
   const handleFiltrar = (value) => {
@@ -14,16 +14,16 @@ const ListaContactos = ({ contactos, eliminarContacto }) => {
     contacto.telefono.includes(filtro)
   );
 
-
-
   return (
     <>
       <h2>Tus Contactos guardados</h2>
       <div className='lista-main'>
-    
+
         <button className='boton-filtro'>
-        <h2>Filtro</h2>
-        <Filtro onFiltrar={handleFiltrar} /></button>
+          <h2>Filtro</h2>
+          <Filtro onFiltrar={handleFiltrar} />
+        </button>
+        
         {contactosFiltrados.map((contacto, index) => (
           <div className='card-completo' key={index}>
             <div className='card-parametro'>
@@ -39,8 +39,12 @@ const ListaContactos = ({ contactos, eliminarContacto }) => {
             </div>
           </div>
         ))}
-      </div>
 
+        <div className='main-reset'>
+          <h2>Quieres volver a empezar ? Aqui puedes eliminar todos tus contactos. </h2>
+          <button onClick={limpiarLocalStorage}>Eliminar Todos Los contactos</button>
+        </div>
+      </div>
     </>
   );
 };

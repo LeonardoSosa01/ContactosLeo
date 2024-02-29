@@ -49,14 +49,9 @@ const App = () => {
         </button>
         {listaAbierta && (
           <div className='main-lista'>
-            <ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} />
+            <ListaContactos contactos={contactos} eliminarContacto={eliminarContacto} filtro={filtro} limpiarLocalStorage={limpiarLocalStorage} />
           </div>
         )}
-
-        <div className='main-reset'>
-          <h2>Quieres volver a empezar ? Aqui puedes eliminar todos tus contactos. </h2>
-          <button onClick={limpiarLocalStorage}>Eliminar Todos Los contactos</button>
-        </div>
       </div>
     </div>
   );
