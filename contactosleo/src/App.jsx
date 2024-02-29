@@ -41,7 +41,7 @@ const App = () => {
 
       <header className='main'>
         <nav className='main-route'>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/'>Menú</NavLink>
           <NavLink to='formulario'>Agregar un Contacto</NavLink>
           <NavLink to='Lista'>Tu Lista De Contactos</NavLink>
         </nav>
