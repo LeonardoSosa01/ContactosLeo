@@ -10,4 +10,4 @@
 // y debajo de todo esto 
 // Footer: aqui colocamos el pequeño footer con la informacion de quien realizo el proyecto y mas informacion acerca de mi
 
-
+// tiene implementado Rutas y LocalStorage
